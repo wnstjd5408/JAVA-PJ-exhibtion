@@ -32,9 +32,11 @@ public class ArtPieceList {
 	public void setYear(Timestamp year) {
 		this.year = year;
 	}
+	
 	public String getExID() {
 		return exID;
 	}
+	
 	public void setExID(String exID) {
 		this.exID = exID;
 	}
