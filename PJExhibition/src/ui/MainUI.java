@@ -116,7 +116,6 @@ public class MainUI extends JFrame {
 					}
 					else if(result == JOptionPane.YES_OPTION) {
 						MainUI.userid = null;
-						System.out.println("예 클릭시 " + MainUI.userid);
 						MainUI mainUI = new MainUI(MainUI.userid );
 						mainUI.setVisible(true);
 						control.Disconnect();

@@ -77,18 +77,12 @@ public class LoginUI extends JFrame {
         		 JOptionPane.showMessageDialog(null, "아이디 또는 비밀번호를 입력 하셔야 됩니다.", "아이디나 비번을 입력!", JOptionPane.DEFAULT_OPTION);
         		 return;
         		 } 
-        	 
-        	 
-            System.out.println(id);
-            System.out.println(pw);
             UserControl control = new UserControl();
             
             try {
-            Userlist list = control.userSelectOne(id, userPW);
-            System.out.println(list.getPhoneNum());
-            
-            new MainUI(list.getUserId());
-            dispose();
+	            Userlist list = control.userSelectOne(id, userPW);
+	            new MainUI(list.getUserId());
+	            dispose();
             }
             catch(NullPointerException ms) {
             	JOptionPane.showMessageDialog(null, "로그인이 일치하지않습니다..");

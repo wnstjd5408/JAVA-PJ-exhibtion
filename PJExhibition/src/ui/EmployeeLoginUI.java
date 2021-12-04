@@ -97,9 +97,9 @@ public class EmployeeLoginUI extends JFrame {
 					 EmployeeList list = control.employeeSelectone(managerID, managerPW);
 					 System.out.println(list.geteName());
 					 EmployeeMangeUI employeeUI = new EmployeeMangeUI(list.geteID());
+					 JOptionPane.showMessageDialog(null, list.geteName()+"님 로그인 성공했습니다...");
 					 employeeUI.setVisible(true);
 					 control.disconnect();
-					 JOptionPane.showMessageDialog(null, "로그인 성공했습니다...");
 					 dispose();
 				 }
 				 catch(NullPointerException ms) {

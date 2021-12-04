@@ -78,13 +78,13 @@ public class EmployeeModifyUI extends JFrame {
 				if(row > 0) {
 					EmployeeMangeUI employeeMangeUI = new EmployeeMangeUI(EmployeeModifyUI.eid);
 					
-	        		JOptionPane.showMessageDialog(null, "수정", "수정되었습니다.", JOptionPane.DEFAULT_OPTION);
+	        		JOptionPane.showMessageDialog(null, "수정되었습니다.", "수정", JOptionPane.DEFAULT_OPTION);
 					employeeMangeUI.setVisible(true);
 					control.Disconnect();
 					dispose();
 				}
 				else {
-	        		JOptionPane.showMessageDialog(null, "수정", "값을 선택해주세요!!.", JOptionPane.DEFAULT_OPTION);
+	        		JOptionPane.showMessageDialog(null, "값을 선택해주세요!!.", "수정", JOptionPane.DEFAULT_OPTION);
 
 				}
 				

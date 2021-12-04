@@ -10,17 +10,7 @@ public class Userlist {
 	
 	
 	
-	public Userlist() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Userlist(String userId, String userPW, String userName, String phoneNum) {
-		super();
-		this.userId = userId;
-		this.userPW = userPW;
-		this.userName = userName;
-		this.phoneNum = phoneNum;
-	}
+
 	
 	public String getUserId() {
 		return userId;
