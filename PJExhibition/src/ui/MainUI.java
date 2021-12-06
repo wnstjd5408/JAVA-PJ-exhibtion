@@ -1,4 +1,4 @@
-// mainUI.java
+
 package ui;
 
 import java.awt.Dimension;
@@ -50,7 +50,7 @@ public class MainUI extends JFrame {
 		ArrayList<byte[]> imglist = control.image();
 		ArrayList<String> titlelist= new ArrayList<String>();
 		String name = control1.searchUserName(MainUI.userid);
-		
+
 		for (Exhibitionlist ei : list) {
 			titlelist.add(ei.getExTitle());
 		}
@@ -66,20 +66,20 @@ public class MainUI extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 
-		
-		
+
+
 		//사용자 이름
 		if(name == null) {
-		label_userName = new JLabel();
-			
+			label_userName = new JLabel();
+
 		}
 		else {
-		label_userName = new JLabel(name+ "님이 로그인");
-		
+			label_userName = new JLabel(name+ "님이 로그인");
+
 		}
 		label_userName.setBounds(1200, 30, 300, 60);
 		getContentPane().add(label_userName);
-		
+
 		if(userid == null) {
 
 			JButton btn_tologin = new JButton("LOGIN");
@@ -103,7 +103,7 @@ public class MainUI extends JFrame {
 			btn_tologin.setBounds(1350, 30, 100, 50);
 			getContentPane().add(btn_tologin);
 
-		
+
 
 			btn_tologin.addActionListener(new ActionListener() {
 				@Override
@@ -122,27 +122,27 @@ public class MainUI extends JFrame {
 						dispose();
 					}
 					else {
-						
+
 					}
 
 
-	
+
 				}
 			});
-			
-			
+
+
 			JButton btnMyPage = new JButton("MyPage");
 			btnMyPage.setBounds(10, 30, 100 , 50);
 			getContentPane().add(btnMyPage);
 			btnMyPage.addActionListener(new ActionListener() {
-				
+
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					MyPageUI UI  = new  MyPageUI(MainUI.userid);
 					UI.setVisible(true);
 				}
 			});
-			
+
 		}
 
 		//1번 버튼 관련 + 클릭이벤트
@@ -156,7 +156,7 @@ public class MainUI extends JFrame {
 				// TODO Auto-generated method stub
 				SectionUI se = new SectionUI(list.get(0), imglist.get(0), MainUI.userid);
 				se.setVisible(true);
-//				setVisible(false);
+				//				setVisible(false);
 			}
 		});
 
